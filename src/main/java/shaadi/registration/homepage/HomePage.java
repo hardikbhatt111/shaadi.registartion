@@ -1,10 +1,13 @@
 package shaadi.registration.homepage;
 
 import java.io.File;
-
+import java.io.IOException;
 import java.util.Scanner;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -22,13 +25,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class HomePage{
 	
 	WebDriver driver;
+	WebDriverWait wait;
+	String driver_path,language,name;
 		
 	@Test (dataProvider="readData")
 	public void openBrowserandValidate(String url,String email,String pass,String lang) throws Exception
 	{
 				
-		String driver_path = getFilePath()+"\\src\\test\\resources\\chromedriver.exe";
-		driver_path = driver_path.replaceAll(".\\\\src", "\\src");
+		driver_path = "src\\test\\resources\\chromedriver.exe";
 		
 		System.setProperty("webdriver.chrome.driver", driver_path);
 		driver = new ChromeDriver();
@@ -37,7 +41,7 @@ public class HomePage{
 		driver.get(url);
 		driver.manage().window().maximize();
 		
-		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait = new WebDriverWait(driver,20);
 		
 		driver.findElement(By.xpath("//a[@data-testid='login_link']")).click();
 		
@@ -45,6 +49,8 @@ public class HomePage{
 		
 		driver.findElement(By.xpath("//input[@data-testid='email']")).sendKeys(email);
 		driver.findElement(By.xpath("//input[@data-testid='password1']")).sendKeys(pass);
+		
+		Thread.sleep(2000);
 		
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@class='Dropdown-placeholder']")));
 		
@@ -61,7 +67,11 @@ public class HomePage{
 		
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@class='Dropdown-control mother_tongue_selector Dropdown-disabled']/div[1]")));
 		
-		String language = driver.findElement(By.xpath("//div[@class='Dropdown-control mother_tongue_selector Dropdown-disabled']/div[1]")).getText();
+		language = driver.findElement(By.xpath("//div[@class='Dropdown-control mother_tongue_selector Dropdown-disabled']/div[1]")).getText();
+		
+		name = lang+"shaadi";
+		clickScreenshot(name);
+		
 		Assert.assertEquals(language, lang);
 	}
 	
@@ -69,8 +79,8 @@ public class HomePage{
 	@DataProvider (name="readData")
 	public Object[][] readCSV() throws Exception
 	{
-		String filename = getFilePath()+"\\src\\test\\resources\\Registration.csv";
-		filename = filename.replaceAll(".\\\\src", "\\src");
+		
+		String filename = "src\\test\\resources\\Registration.csv";
 		
 		File file = new File(filename);
 		Scanner sc = new Scanner(file);
@@ -99,13 +109,15 @@ public class HomePage{
 		
 	@AfterMethod(alwaysRun = true)
 	  public void closeBrowser() {
-		    //driver.close();
+		    driver.close();
 		}
 	
-	public String getFilePath()
+	public void clickScreenshot(String name) throws Exception
 	{
-		File currentDirFile = new File(".");
-		String helper = currentDirFile.getAbsolutePath();
-		return helper;
+		TakesScreenshot sr = ((TakesScreenshot)driver);
+		File file1 = sr.getScreenshotAs(OutputType.FILE);
+		File file2 = new File("screenshots\\"+name+".png");
+		FileUtils.copyFile(file1, file2);
 	}
+	
 }

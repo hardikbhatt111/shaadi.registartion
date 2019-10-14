@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="21271" started-at="2019-10-14T05:35:24Z" finished-at="2019-10-14T05:35:45Z">
+  <suite name="Suite" duration-ms="27492" started-at="2019-10-14T06:42:17Z" finished-at="2019-10-14T06:42:44Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="21271" started-at="2019-10-14T05:35:24Z" finished-at="2019-10-14T05:35:45Z">
+    <test name="Test" duration-ms="27492" started-at="2019-10-14T06:42:17Z" finished-at="2019-10-14T06:42:44Z">
       <class name="shaadi.registration.homepage.HomePage">
-        <test-method status="PASS" signature="openBrowserandValidate(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:shaadi.registration.homepage.HomePage@7cd62f43]" name="openBrowserandValidate" duration-ms="11799" started-at="2019-10-14T05:35:24Z" data-provider="readData" finished-at="2019-10-14T05:35:36Z">
+        <test-method status="PASS" signature="openBrowserandValidate(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:shaadi.registration.homepage.HomePage@7cd62f43]" name="openBrowserandValidate" duration-ms="14221" started-at="2019-10-14T06:42:17Z" data-provider="readData" finished-at="2019-10-14T06:42:31Z">
           <params>
             <param index="0">
               <value>
@@ -33,11 +33,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowserandValidate -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:shaadi.registration.homepage.HomePage@7cd62f43]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2019-10-14T05:35:36Z" finished-at="2019-10-14T05:35:36Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:shaadi.registration.homepage.HomePage@7cd62f43]" name="closeBrowser" is-config="true" duration-ms="152" started-at="2019-10-14T06:42:31Z" finished-at="2019-10-14T06:42:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowserandValidate(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:shaadi.registration.homepage.HomePage@7cd62f43]" name="openBrowserandValidate" duration-ms="9328" started-at="2019-10-14T05:35:36Z" data-provider="readData" finished-at="2019-10-14T05:35:45Z">
+        <test-method status="PASS" signature="openBrowserandValidate(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:shaadi.registration.homepage.HomePage@7cd62f43]" name="openBrowserandValidate" duration-ms="12897" started-at="2019-10-14T06:42:31Z" data-provider="readData" finished-at="2019-10-14T06:42:44Z">
           <params>
             <param index="0">
               <value>
@@ -63,7 +63,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowserandValidate -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:shaadi.registration.homepage.HomePage@7cd62f43]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2019-10-14T05:35:45Z" finished-at="2019-10-14T05:35:45Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:shaadi.registration.homepage.HomePage@7cd62f43]" name="closeBrowser" is-config="true" duration-ms="164" started-at="2019-10-14T06:42:44Z" finished-at="2019-10-14T06:42:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
