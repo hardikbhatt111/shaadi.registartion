@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="21271" started-at="2019-10-14T05:35:24Z" finished-at="2019-10-14T05:35:45Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="21271" started-at="2019-10-14T05:35:24Z" finished-at="2019-10-14T05:35:45Z">
+      <class name="shaadi.registration.homepage.HomePage">
+        <test-method status="PASS" signature="openBrowserandValidate(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:shaadi.registration.homepage.HomePage@7cd62f43]" name="openBrowserandValidate" duration-ms="11799" started-at="2019-10-14T05:35:24Z" data-provider="readData" finished-at="2019-10-14T05:35:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://marathishaadi.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Aabbccdd123@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[qwerty1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Marathi]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowserandValidate -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:shaadi.registration.homepage.HomePage@7cd62f43]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2019-10-14T05:35:36Z" finished-at="2019-10-14T05:35:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowserandValidate(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:shaadi.registration.homepage.HomePage@7cd62f43]" name="openBrowserandValidate" duration-ms="9328" started-at="2019-10-14T05:35:36Z" data-provider="readData" finished-at="2019-10-14T05:35:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://gujaratishaadi.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Aabbccdd123@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[qwerty1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Gujarati]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowserandValidate -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:shaadi.registration.homepage.HomePage@7cd62f43]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2019-10-14T05:35:45Z" finished-at="2019-10-14T05:35:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- shaadi.registration.homepage.HomePage -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
